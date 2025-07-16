@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background: #262a2f;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  padding: 25px 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.container:hover {
+  transform: translate(-50%, -50%) scale(1.03);
+  box-shadow: 0 8px 40px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.container p {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+
+.container input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 1px solid #494eea;
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.container input::placeholder {
+  color: #ccc;
+  opacity: 1;  
+}
+
+.container button {
+  width: 100%;
+  height: 50px;
+  background: #494eea;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-weight: 500;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);    
+}
+
+.container button:hover {
+  background: #3a3fcf;
+  transform: scale(1.02);
+}
+
+#imgBox {
+  width: 200px;
+  margin: 10px auto;
+  border-radius: 9px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+#imgBox img {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+#imgBox.show-img {
+  max-height: 200px;
+  border: 1px solid #d1d1d1;
+}
